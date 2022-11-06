@@ -1,0 +1,210 @@
+.repo-details-main{
+    box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
+    background-color: hsl(227 100% 98%) ;
+   min-height: 100vh;
+   display: flex;
+   justify-content: space-around;
+}
+
+.single-repo{
+    box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
+    background-color: white;
+    border-radius: 10px;
+    width:  600px;
+    height: max-content;
+    margin-top:  100px;
+}
+
+
+
+.single-repo-name{
+    display: flex;
+  padding:  20px;
+    justify-content: center;
+    background-color: hsl(227 100% 98%) ;
+    width:500px;
+    margin: 30px;  
+    border-radius: 10px;
+}
+
+.single-repo-name h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: blue;
+}
+
+.single-repo-name h4{
+   margin-top:  10px;
+}
+
+
+.single-repo-desc{
+    background-color: hsl(227 100% 98%) ;
+    padding:  20px;
+    border-radius: 10px;
+    margin:  30px;
+    margin-top: 0px;
+    text-align: left;
+    width:  500px;
+}
+
+.single-repo-desc h4{
+    font-size: 20px;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 0.863);
+}
+
+.single-repo-desc p{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color:  rgb(79, 94, 117);  
+}
+
+.lang{
+    display: flex;
+    margin-top:  20px;
+}
+
+.j-circle{
+    width:  20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(197, 197, 41) ;
+    margin-right: 10px;
+}
+
+.h-circle{
+    width:  20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(197, 64, 41) ;
+    margin-right: 10px;
+}
+
+.c-circle{
+    width:  20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(12, 42, 107) ;
+    margin-right: 10px;
+}
+
+
+.repo-line{
+   border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom:  20px;
+    background-color: rgba(245, 246, 248, 0.486); ;
+    box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
+    padding-top:  20px;
+}
+
+
+.url{
+    text-decoration: none;
+    color:  rgb(50, 212, 198);
+    transition: 0.8s;
+}
+
+.url:hover{
+    color:  rgb(23, 172, 135);
+}
+
+.live{
+    text-decoration: none;
+    color:  rgb(212, 50, 198);
+    transition: 0.8s;
+}
+
+.live:hover{
+    color:  rgb(150, 16, 116);
+}
+
+.repo-btn{
+    height:  40px;
+    width:  150px;
+    border-radius: 10px;
+    background-image: linear-gradient( 90deg, rgb(34, 238, 221) 0%, rgb(57, 82, 226) 100%);
+    color: rgb(59, 87, 11);
+    font-size:  18px;
+    border:  none;
+    border-left: 1px solid rgb(10, 10, 59);
+    border-bottom: 1px solid rgb(21, 7, 59);
+    margin-bottom: 30px;
+}
+
+.repo-btn:hover{
+    background-image: linear-gradient( 90deg, rgb(57, 82, 226) 0%, rgb(34, 238, 221) 100%);
+    color: rgb(59, 87, 11);
+    cursor: pointer;
+    border-right: 1px solid rgb(10, 10, 59);
+    border-left :none;
+}
+
+@media screen and (max-width: 680px) {
+    .single-repo h1{
+        font-size: 20px;
+    }
+
+    .single-repo h4{
+        font-size: 15px;
+        margin-top:  1px;
+    }
+
+    .single-repo p{
+        font-size: 15px;
+    }
+
+    .single-repo-name{
+        width:  350px;
+       
+    }
+
+    .single-repo-desc{
+        width:  350px;
+    }
+
+    .single-repo{
+        width:  max-content;
+    }
+
+
+    .repo-btn{
+        width:  120px;
+        font-size:  15px;
+    }
+
+   
+}
+
+@media screen and (max-width: 479px) {
+    .single-repo h1{
+        font-size: 19px;
+    }
+
+    .single-repo h4{
+        font-size: 14px;
+        margin-top:  0px;
+    }
+
+    .single-repo p{
+        font-size: 15px;
+    }
+
+    .single-repo-name{
+        width:  270px;
+        padding: 5px;
+    }
+
+    .single-repo-desc{
+        width:  270px;
+        padding: 5px;
+    }
+
+    .single-repo{
+        width:  max-content;
+    }
+}
+    

@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.author {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  left: 0;
+  right: 0;
+  color:  hsl(198, 76%, 37%);
+  background-color:  #0c1f31;
+  padding-top:  10px;
+  padding-bottom:  10px;
+  animation:  slide 1s ease-in-out;
+}
+
+.author a{
+  color:  hsl(200, 83%, 45%);
+  text-decoration: none;
+  animation: color 1s ease-in-out infinite;
+}
+
+
+/* color animation */
+
+@keyframes color {
+  0%{
+    color:  hsl(198, 83%, 45%);
+  }
+  50%{
+    color:  hsl(198, 76%, 37%);
+  }
+  100%{
+    color:  hsl(198, 83%, 45%);
+  }
+}
+ 
+
+/* slide anmation */
+
+@keyframes slide {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .author{
+    font-size: 12px;
+  }
+}
+  
+

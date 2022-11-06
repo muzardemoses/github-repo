@@ -1,0 +1,361 @@
+.main-container {
+  color: rgba(6, 2, 19, 0.934);
+  background-color: hsl(227 100% 98%);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.user-profile {
+  padding: 20px;
+  margin: 30px;
+  background-color: #f6f1f9;
+  border-radius: 10px;
+  width: max-content;
+  height: max-content;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.user-profile h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(9, 4, 22);
+}
+
+.user-avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.repos-container {
+  margin-right: 60px;
+  margin-top: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  height: max-content;
+}
+
+.sub-contain {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+  width: max-content;
+  box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.sub-repo {
+  display: flex;
+  text-align: left;
+  padding: 20px;
+  transition: 0.8s;
+}
+
+/* animation for sub-repo */
+.sub-repo:hover {
+  transform: scale(1.1);
+}
+
+.sub-repo a {
+  color: blue;
+  text-decoration: none;
+  height: 4px;
+}
+
+.piv {
+  margin-left: 10px;
+  border: 1px solid #0f112e;
+  border-radius: 10px;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.sub-repo h4 {
+  margin-top: 10px;
+}
+
+.line {
+  border: 1px solid #9097b6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.paginationBttns {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  list-style: none;
+}
+
+.paginationBttns a {
+  color: #0f112e;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #0f112e;
+  border-radius: 10px;
+  margin: 10px;
+  transition: 0.8s;
+}
+
+.paginationBttns a:hover {
+  background-color: #0f112e;
+  color: #f6f1f9;
+  cursor: pointer;
+}
+
+.paginationActive a {
+  background-color: #0f112e;
+  color: #f6f1f9;
+}
+
+.paginationDisabled a {
+  background-color: #c0c1cfbd;
+  color: #f6f1f9;
+}
+
+.paginationDisabled a:hover {
+  background-color: #c0c1cfbd;
+  color: #f6f1f9;
+  cursor: not-allowed;
+}
+
+.previous a:hover {
+  background-color: #14455868;
+  color: #0f112e;
+}
+
+.next a:hover {
+  background-color: #14455868;
+  color: #0f112e;
+}
+
+.both {
+  display: flex;
+  flex-direction: row;
+}
+
+.other {
+  margin: 100px;
+  width: max-content;
+  box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
+  background-color: white;
+  border-radius: 10px;
+}
+
+.other h2 {
+  margin: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(218, 112, 129);
+}
+
+.luc{
+/* using linear gradient for color */
+  background: linear-gradient(90deg, #cf57cf 0%, #dadb95 50%, #47aca2 50%, #2c6379 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.sla{
+  color: #2c6379;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.err{
+  color: #d8327f;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.error{
+  height:  40px;
+  width:  190px;
+  border-radius: 10px;
+  background-image: linear-gradient( 90deg, rgb(184, 221, 238) 0%, rgb(118, 162, 243) 100%);
+  color: rgb(9, 10, 12);
+  font-size:  15px;
+  border:  none;
+  border-left: 1px solid rgb(10, 10, 59);
+  border-bottom: 1px solid rgb(21, 7, 59);
+ margin-bottom: 30px;
+}
+
+.error:hover{
+  background-image: linear-gradient( 90deg, rgb(118, 162, 243) 0%, rgb(184, 221, 238) 100%);
+  color: rgb(9, 10, 12);
+  cursor: pointer; 
+  
+  border-right: 1px solid rgb(10, 10, 59);
+  border-left :none;
+}
+
+
+
+
+@media screen and (max-width: 1500px) {
+  .sub-contain {
+    flex-direction: column;
+  }
+ 
+}
+
+@media screen and (max-width: 1180px) {
+  .both{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .repos-container{
+    margin-right: unset;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .main-container h1{
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .user-avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sub-repo{
+    padding: 3px;
+  }
+
+  .sub-repo a{
+    font-size: 12px;
+  }
+
+  .piv{
+    font-size: 12px;
+  }
+
+  .about-game{
+     width:  300px;
+  }
+
+  .other h2{
+    font-size: 18px;
+  }
+
+  .other h3{
+    font-size: 15px;
+  }
+
+  .luc{
+    font-size: 18px;
+  }
+
+  .sla{
+    font-size: 18px;
+  }
+
+  .err{
+    font-size: 18px;
+  }
+
+  .error{
+    width:  150px;
+    font-size:  12px;
+  }
+
+  .about-game p {
+    font-size: 12px;
+  }
+ 
+}
+
+@media screen and (max-width: 479px) {
+  .main-container h1{
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .user-avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+ 
+
+  .sub-repo a{
+    font-size: 10px;
+  }
+
+  .piv{
+    font-size: 10px;
+  }
+
+  .about-game{
+     width:  220px;
+  }
+
+  .other h2{
+    font-size: 15px;
+  }
+
+  .other{
+    margin-top: 10px;
+  }
+
+  .sub-contain{
+    margin-top: 50px;
+  }
+
+  .other h3{
+    font-size: 15px;
+  }
+
+  .luc{
+    font-size: 15px;
+  }
+
+  .sla{
+    font-size: 15px;
+  }
+
+  .err{
+    font-size: 15px;
+  }
+
+  .error{
+    width:  120px;
+    font-size:  10px;
+  }
+
+  .about-game p {
+    font-size: 10px;
+  }
+
+  .paginationBttns {
+    margin-top: 30px;
+    margin-left: -10px;
+  }
+ 
+  .paginationBttns a {
+    padding: 10px;
+    margin: 7px;
+  }
+
+  .repos-container{
+   max-width: 300px;
+  }
+}
