@@ -17,7 +17,7 @@ function App() {
       </Routes>
       <div className="author">
 				<h5>
-					Assignment by{" "}
+					Exam by{" "}
 					<a
 						href=" https://www.altschoolafrica.com/ "
 						target="_blank"
