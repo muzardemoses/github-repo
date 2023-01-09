@@ -5,10 +5,14 @@ import ReactPaginate from "react-paginate";
 import "../Assets/styles/github-repo.css";
 import { Link, useSubmit } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { RotateLoader } from 'react-spinners';
+
 
 export const GithubRepo = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+ 
+
   const [users] = useState("muzardemoses");
   const [pageNumber, setPageNumber] = useState(0);
   const usersPerPage = 4;
@@ -74,13 +78,22 @@ export const GithubRepo = () => {
           rel="canonical" 
         />
       </Helmet>
-      <h1>Viewing {users}'s repositories</h1>
+      <header className="github-repo-header">
+        <h1>Viewing {users}'s Repositories</h1>
+      </header>
+      
       <div className="both">
         <div className="sub-contain">
           <div className="user-profile">{displayOwner}</div>
           <section className="repos-container">
             {loading ? (
-              <div className="loading">Loading...</div>
+              <div className="loading">
+              <RotateLoader
+              size={150}
+              color={"#123abc"}
+              loading={loading}
+            />
+              </div>
             ) : (
               <>
                 <div className="repos">{displayRepos}</div>

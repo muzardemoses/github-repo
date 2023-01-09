@@ -1,18 +1,34 @@
 .main-container {
   color: rgba(6, 2, 19, 0.934);
-  background-color: hsl(227 100% 98%);
+  /* background-color: hsl(227 100% 98%); */
+  background-color: hsl(227 100% 98%) ;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
+
+.github-repo-header{
+  background-color:hsl(227 100% 98%);
+  margin-top: 0px;
+  padding: 20px;
+  border-bottom: 1px solid #e1e2eb;
+  box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.github-repo-header h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(57, 65, 155);
+}
+
 
 .user-profile {
   padding: 20px;
   margin: 30px;
-  background-color: #f6f1f9;
+  background-color: white;
   border-radius: 10px;
   width: max-content;
   height: max-content;
@@ -22,7 +38,7 @@
 .user-profile h1 {
   font-size: 25px;
   font-weight: 600;
-  color: rgb(9, 4, 22);
+  color: rgb(226, 218, 147);
 }
 
 .user-avatar {
