@@ -1,21 +1,88 @@
 .main-container {
   color: rgba(6, 2, 19, 0.934);
   /* background-color: hsl(227 100% 98%); */
-  background-color: hsl(227 100% 98%) ;
+  background-color: #141d2f;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  font-family: 'Space Mono', monospace;
   /* padding-top: 30px; */
 }
 
-.github-repo-header{
-  background-color:hsl(227 100% 98%);
+.search-form {
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-con-con {
+  position: absolute;
+  /* inset-y-0 */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 12px;
+  pointer-events: none;
+  margin: 0 auto;
+}
+
+.search-con-con svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+input {
+  width: 100%;
+  display: block;
+  padding: 20px;
+  padding-left: 40px;
+  font-size: 16px;
+  color: white;
+  /* Gray/300 */
+  border: none;
+  border-radius: 8px;
+  /* Gray/50 */
+  background-color: #1e2a47;
+  outline: none;
+}
+
+input::placeholder {
+  color: #e0e1e7;
+}
+
+.search-btn{
+  color: white;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  background-color: #0079ff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+
+.search-btn:hover{
+  background-color: #0062cc; ;
+}
+
+
+
+
+.github-repo-header {
+  background-color: #1e2a47;
   margin-top: 0px;
   padding: 20px;
   border-bottom: 1px solid #e1e2eb;
-  box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .github-repo-header h1 {
@@ -24,88 +91,52 @@
   color: rgb(57, 65, 155);
 }
 
-
 .user-profile {
-  padding: 20px;
-  margin: 30px;
-  background-color: white;
-  border-radius: 10px;
-  width: max-content;
+  width: 100%;
   height: max-content;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+ 
 }
 
-.user-profile h1 {
-  font-size: 25px;
-  font-weight: 600;
-  color: rgb(226, 218, 147);
+.user-profile div {
+  background-color: #1e2a47;
 }
+
+
+
+.profile-detailer{
+  margin-top: 50px;
+  border-radius: 8px;
+}
+
+
 
 .user-avatar {
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  opacity: 0.8;
 }
 
 .repos-container {
-  margin-right: 60px;
   margin-top: 60px;
   padding: 20px;
   border-radius: 10px;
-  max-width: 700px;
   height: max-content;
+  background-color: #1e2a47;
 }
 
 .sub-contain {
   justify-content: space-around;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 100px;
   width: max-content;
-  box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
-  background-color: white;
+
+  /* background-color: #1e2a47; */
   border-radius: 10px;
 }
 
-.sub-repo {
-  display: flex;
-  text-align: left;
-  padding: 20px;
-  transition: 0.8s;
-}
 
-/* animation for sub-repo */
-.sub-repo:hover {
-  transform: scale(1.1);
-}
 
-.sub-repo a {
-  color: blue;
-  text-decoration: none;
-  height: 4px;
-}
-
-.piv {
-  margin-left: 10px;
-  border: 1px solid #0f112e;
-  border-radius: 10px;
-  font-size: 14px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.sub-repo h4 {
-  margin-top: 10px;
-}
-
-.line {
-  border: 1px solid #9097b6;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 
 .paginationBttns {
   display: flex;
@@ -115,45 +146,48 @@
 }
 
 .paginationBttns a {
-  color: #0f112e;
+  color: white;
   text-decoration: none;
   padding: 10px;
-  border: 1px solid #0f112e;
+  border: none;
   border-radius: 10px;
   margin: 10px;
   transition: 0.8s;
+  background-color: goldenrod;
+  font-weight: 600;
 }
 
 .paginationBttns a:hover {
-  background-color: #0f112e;
-  color: #f6f1f9;
+  background-color: rgba(218, 165, 32, 0.767);
+  color: white;
   cursor: pointer;
 }
 
 .paginationActive a {
-  background-color: #0f112e;
+  background-color: #81511d;
   color: #f6f1f9;
 }
 
 .paginationDisabled a {
-  background-color: #c0c1cfbd;
-  color: #f6f1f9;
+  opacity: 0.2;
 }
 
 .paginationDisabled a:hover {
-  background-color: #c0c1cfbd;
-  color: #f6f1f9;
   cursor: not-allowed;
 }
+.previous a {
+  background-color: rgb(202, 205, 50);
+}
 
+.next a {
+  background-color: rgb(202, 205, 50);
+}
 .previous a:hover {
-  background-color: #14455868;
-  color: #0f112e;
+  background-color: yellowgreen;
 }
 
 .next a:hover {
-  background-color: #14455868;
-  color: #0f112e;
+  background-color: yellowgreen;
 }
 
 .both {
@@ -164,9 +198,9 @@
 .other {
   margin: 100px;
   width: max-content;
-  box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
-  background-color: white;
+  background-color: #1e2a47;
   border-radius: 10px;
+  height: max-content;
 }
 
 .other h2 {
@@ -176,73 +210,83 @@
   color: rgb(218, 112, 129);
 }
 
-.luc{
-/* using linear gradient for color */
-  background: linear-gradient(90deg, #cf57cf 0%, #dadb95 50%, #47aca2 50%, #2c6379 100%);
+.luc {
+  /* using linear gradient for color */
+  background: linear-gradient(
+    90deg,
+    #cf57cf 0%,
+    #dadb95 50%,
+    #47aca2 50%,
+    #2c6379 100%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 25px;
   font-weight: 600;
 }
 
-.sla{
+.sla {
   color: #2c6379;
   font-size: 25px;
   font-weight: 600;
 }
 
-.err{
+.err {
   color: #d8327f;
   font-size: 25px;
   font-weight: 600;
 }
 
-.error{
-  height:  40px;
-  width:  190px;
+.error {
+  height: 40px;
+  width: 190px;
   border-radius: 10px;
-  background-image: linear-gradient( 90deg, rgb(184, 221, 238) 0%, rgb(118, 162, 243) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgb(184, 221, 238) 0%,
+    rgb(118, 162, 243) 100%
+  );
   color: rgb(9, 10, 12);
-  font-size:  15px;
-  border:  none;
+  font-size: 15px;
+  border: none;
   border-left: 1px solid rgb(10, 10, 59);
   border-bottom: 1px solid rgb(21, 7, 59);
- margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-.error:hover{
-  background-image: linear-gradient( 90deg, rgb(118, 162, 243) 0%, rgb(184, 221, 238) 100%);
+.error:hover {
+  background-image: linear-gradient(
+    90deg,
+    rgb(118, 162, 243) 0%,
+    rgb(184, 221, 238) 100%
+  );
   color: rgb(9, 10, 12);
-  cursor: pointer; 
-  
+  cursor: pointer;
+
   border-right: 1px solid rgb(10, 10, 59);
-  border-left :none;
+  border-left: none;
 }
-
-
-
 
 @media screen and (max-width: 1500px) {
   .sub-contain {
     flex-direction: column;
   }
- 
 }
 
 @media screen and (max-width: 1180px) {
-  .both{
+  .both {
     flex-direction: column;
     align-items: center;
   }
 
-  .repos-container{
+  .repos-container {
     margin-right: unset;
     margin-top: 10px;
   }
 }
 
 @media screen and (max-width: 680px) {
-  .main-container h1{
+  .main-container h1 {
     font-size: 18px;
     font-weight: 600;
   }
@@ -252,55 +296,44 @@
     height: 200px;
   }
 
-  .sub-repo{
-    padding: 3px;
+ 
+
+  .about-game {
+    width: 300px;
   }
 
-  .sub-repo a{
-    font-size: 12px;
-  }
-
-  .piv{
-    font-size: 12px;
-  }
-
-  .about-game{
-     width:  300px;
-  }
-
-  .other h2{
+  .other h2 {
     font-size: 18px;
   }
 
-  .other h3{
+  .other h3 {
     font-size: 15px;
   }
 
-  .luc{
+  .luc {
     font-size: 18px;
   }
 
-  .sla{
+  .sla {
     font-size: 18px;
   }
 
-  .err{
+  .err {
     font-size: 18px;
   }
 
-  .error{
-    width:  150px;
-    font-size:  12px;
+  .error {
+    width: 150px;
+    font-size: 12px;
   }
 
   .about-game p {
     font-size: 12px;
   }
- 
 }
 
 @media screen and (max-width: 479px) {
-  .main-container h1{
+  .main-container h1 {
     font-size: 17px;
     font-weight: 600;
   }
@@ -312,49 +345,41 @@
 
  
 
-  .sub-repo a{
-    font-size: 10px;
+  .about-game {
+    width: 220px;
   }
 
-  .piv{
-    font-size: 10px;
-  }
-
-  .about-game{
-     width:  220px;
-  }
-
-  .other h2{
+  .other h2 {
     font-size: 15px;
   }
 
-  .other{
+  .other {
     margin-top: 10px;
   }
 
-  .sub-contain{
+  .sub-contain {
     margin-top: 50px;
   }
 
-  .other h3{
+  .other h3 {
     font-size: 15px;
   }
 
-  .luc{
+  .luc {
     font-size: 15px;
   }
 
-  .sla{
+  .sla {
     font-size: 15px;
   }
 
-  .err{
+  .err {
     font-size: 15px;
   }
 
-  .error{
-    width:  120px;
-    font-size:  10px;
+  .error {
+    width: 120px;
+    font-size: 10px;
   }
 
   .about-game p {
@@ -365,13 +390,13 @@
     margin-top: 30px;
     margin-left: -10px;
   }
- 
+
   .paginationBttns a {
     padding: 10px;
     margin: 7px;
   }
 
-  .repos-container{
-   max-width: 300px;
+  .repos-container {
+    max-width: 300px;
   }
 }

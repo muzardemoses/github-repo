@@ -1,14 +1,13 @@
 .repo-details-main{
-    box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
-    background-color: hsl(227 100% 98%) ;
-   min-height: 100vh;
+    background-color: #f6f8ff;
+    min-height: 100vh;
    display: flex;
    justify-content: space-around;
 }
 
 .single-repo{
+    background-color: #ffffff;
     box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
-    background-color: white;
     border-radius: 10px;
     width:  600px;
     height: max-content;
@@ -17,14 +16,16 @@
 
 
 
-.single-repo-name{
+
+/* .single-repo-name{
     display: flex;
   padding:  20px;
     justify-content: center;
-    background-color: hsl(227 100% 98%) ;
+    background-color: #141d2f;
     width:500px;
     margin: 30px;  
     border-radius: 10px;
+    display: flex;
 }
 
 .single-repo-name h1{
@@ -35,17 +36,17 @@
 
 .single-repo-name h4{
    margin-top:  10px;
-}
+} */
 
 
 .single-repo-desc{
-    background-color: hsl(227 100% 98%) ;
+    background-color: #f6f8ff;
     padding:  20px;
     border-radius: 10px;
-    margin:  30px;
+    margin:  32px;
     margin-top: 0px;
     text-align: left;
-    width:  500px;
+    
 }
 
 .single-repo-desc h4{
@@ -96,8 +97,6 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom:  20px;
-    background-color: rgba(245, 246, 248, 0.486); ;
-    box-shadow: 0px 16px 30px -10px rgb(70 96 187 / 20%);
     padding-top:  20px;
 }
 
@@ -144,23 +143,23 @@
 }
 
 @media screen and (max-width: 680px) {
-    .single-repo h1{
+    /* .single-repo h1{
         font-size: 20px;
     }
 
     .single-repo h4{
         font-size: 15px;
         margin-top:  1px;
-    }
+    } */
 
     .single-repo p{
         font-size: 15px;
     }
 
-    .single-repo-name{
+    /* .single-repo-name{
         width:  350px;
        
-    }
+    } */
 
     .single-repo-desc{
         width:  350px;
@@ -180,23 +179,23 @@
 }
 
 @media screen and (max-width: 479px) {
-    .single-repo h1{
+    /* .single-repo h1{
         font-size: 19px;
     }
 
     .single-repo h4{
         font-size: 14px;
         margin-top:  0px;
-    }
+    } */
 
     .single-repo p{
         font-size: 15px;
     }
 
-    .single-repo-name{
+    /* .single-repo-name{
         width:  270px;
         padding: 5px;
-    }
+    } */
 
     .single-repo-desc{
         width:  270px;

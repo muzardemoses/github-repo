@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<GithubRepo />} />
-          <Route path="/repo/:id" element={<RepoDetails />} />
+          <Route path="/repo/:id"  element={<RepoDetails />} />
         </Route>
         <Route path="/error-boundary" element={<ErrorBoundaryExample />} />
         <Route path="*" element={<PageNotFound />} />
@@ -19,7 +19,7 @@ function App() {
         <h5>
           Exam by{" "}
           <a
-            href=" https://www.altschoolafrica.com/ "
+            href=" https://www.altschoolafrica.com/"
             target="_blank"
             className="author-name"
           >
