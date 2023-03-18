@@ -62,14 +62,12 @@ export const GithubRepo = () => {
             <Link
               to={{ pathname: `/repo/${item.name}` }}
               state={{ user: item.owner.login }}
-              className="sub-repo  text-sm font-medium border rounded-lg bg-gray-700 border-gray-600 text-white flex justify-between items-center px-4 py-2 hover:bg-gray-600 cursor-pointer focus:ring-2   focus:outline-none focus:ring-gray-500 mb-2 transition ease-in-out duration-300"
+              className="sub-repo  text-sm font-medium border rounded-lg  text-left bg-gray-700 border-gray-600 text-white flex justify-between items-center px-4 py-2 hover:bg-gray-600 cursor-pointer focus:ring-2   focus:outline-none focus:ring-gray-500 mb-2 transition ease-in-out duration-300 sm:px-3 sm:py-2 "
             >
-              <h3 class="text-blue-300 text-center mt-0">
+              <h3 class="text-blue-300 text-left mt-0 sm:text-sm">
                 {item.name}
               </h3>
-              <h4
-              className="text-gray-300 font-medium text-sm rounded-lg text-center px-2 py-1 border-gray-300 border mt-0"
-              >
+              <h4 className="text-gray-300 font-medium text-sm rounded-lg text-center px-2 py-1 border-gray-300 border mt-0 sm:font-normal sm:px-1.5 sm:py-0.5 sm:text-xs">
                 {item.private ? (
                   <p className="">Private</p>
                 ) : (
@@ -91,39 +89,55 @@ export const GithubRepo = () => {
   const displayOwner = items.slice(0, 1).map((item) => {
     return (
       <div key={item.id} className="flex flex-row p-6 rounded-lg gap-5">
-        <img src={item.owner.avatar_url} alt="avatar" className="user-avatar" />
         <div className="flex flex-col gap-6">
-          <div className="flex justify-between">
-            <div className="text-left">
-              <h4 className="text-white font-bold text-2xl">{profile.name}</h4>
-              {/* eslint-disable-next-line react/jsx-no-target-blank */}
-              <a
-                href={profile.html_url}
-                rel="noreferer"
-                target="_blank"
-                className="text-base font-medium"
-                style={{ color: "#0079ff" }}
-              >
-                @{item.owner.login}
-              </a>
+          <div className="flex gap-4">
+            <img
+              src={item.owner.avatar_url}
+              alt="avatar"
+              className="user-avatar"
+            />
+            <div className="flex justify-between w-full sm:flex-col">
+              {" "}
+              <div className="text-left">
+                <h4 className="text-white font-bold text-2xl sm:text-xl sm:font-semibold">
+                  {profile.name}
+                </h4>
+                {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                <a
+                  href={profile.html_url}
+                  rel="noreferer"
+                  target="_blank"
+                  className="text-base font-medium"
+                  style={{ color: "#0079ff" }}
+                >
+                  @{item.owner.login}
+                </a>
+              </div>
+              {profile.created_at ? (
+                <h3
+                  className=" font-medium text-base sm:text-left"
+                  style={{ color: "#697c9a" }}
+                >
+                  Joined {format(new Date(profile.created_at), "MMM dd, yyyy")}
+                </h3>
+              ) : (
+                <h3>Not Available</h3>
+              )}
             </div>
-            <h3 className=" font-medium text-base" style={{ color: "#697c9a" }}>
-              Joined {format(new Date(profile.created_at), "MMM dd, yyyy")}
-            </h3>
           </div>
-          <div>
+          <div className="ml-32 lg:ml-0 ">
             <p className="text-white text-left"> {profile.bio}</p>
           </div>
           <div
-            className=" p-3 rounded-lg"
+            className=" p-3 rounded-lg ml-32 lg:ml-0 "
             style={{ backgroundColor: "#141d2f" }}
           >
             <table className="w-full">
               <tbody className="flex flex-row justify-between w-full  p-1">
                 <tr>
                   <td className="text-center">
-                    <h4 className="text-center text-white">Repos</h4>
-                    <h4 className="text-2xl font-bold text-zinc-200">
+                    <h4 className="text-center text-white ">Repos</h4>
+                    <h4 className="text-2xl font-bold text-zinc-200 sm:text-xl sm:font-semibold">
                       {profile.public_repos}
                     </h4>
                   </td>
@@ -131,7 +145,7 @@ export const GithubRepo = () => {
                 <tr>
                   <td className="text-center">
                     <h4 className="text-center text-white">Followers</h4>
-                    <h4 className="text-2xl font-bold text-zinc-200">
+                    <h4 className="text-2xl font-bold text-zinc-200 sm:text-xl sm:font-semibold">
                       {profile.followers}
                     </h4>
                   </td>
@@ -139,7 +153,7 @@ export const GithubRepo = () => {
                 <tr>
                   <td className="text-center">
                     <h4 className="text-center text-white">Following</h4>
-                    <h4 className="text-2xl font-bold text-zinc-200">
+                    <h4 className="text-2xl font-bold text-zinc-200 sm:text-xl sm:font-semibold">
                       {profile.following}
                     </h4>
                   </td>
@@ -147,7 +161,7 @@ export const GithubRepo = () => {
               </tbody>
             </table>
           </div>
-          <div className="grid grid-cols-2 gap-4 items-center">
+          <div className="ml-32 grid grid-cols-2 gap-4 items-center lg:ml-0 sm:flex sm:flex-col sm:items-start">
             <div>
               {profile.location ? (
                 <div className="flex gap-2 items-center">
@@ -274,8 +288,8 @@ export const GithubRepo = () => {
         <h1>Viewing {users}'s Repositories</h1>
       </header> */}
 
-      <div className="both">
-        <div className="sub-contain">
+      <div className="both flex gap-10 justify-around flex-row px-20 py-24 xl:flex-col xl:items-center xl:gap-28 lg:px-6 sm:py-14 sm:px-2">
+        <div className="sub-contain w-11/12">
           <form className="search-form">
             <div className="search-container">
               <div className="search-con-con  inset-y-0 ">
@@ -325,42 +339,41 @@ export const GithubRepo = () => {
                   Wait a moment while we fetch your repos
                 </div>
               ) : (
-                <><h2
-                 className="text-white mb-6"
-                >
+                <div>
+                  <h2 className="text-white mb-6 sm:text-lg sm:font-semibold">
                     {profile.name}'s Repositories({profile.public_repos})
-                </h2>
+                  </h2>
                   <div className="repos">{displayRepos}</div>
-                  <ReactPaginate
-                    previousLabel={"Previous"}
-                    nextLabel={"Next"}
-                    pageCount={pageCount}
-                    onPageChange={changePage}
-                    containerClassName={"paginationBttns"}
-                    previousLinkClassName={"previousBttn"}
-                    nextLinkClassName={"nextBttn"}
-                    disabledClassName={"paginationDisabled"}
-                    activeClassName={"paginationActive"}
-                  />
-                </>
+                  <div  className="flex justify-center py-3 ">
+                    <ReactPaginate
+                      previousLabel={"Previous"}
+                      nextLabel={"Next"}
+                      pageCount={pageCount}
+                      onPageChange={changePage}
+                      containerClassName={"paginationBttns"}
+                      previousLinkClassName={"previousBttn"}
+                      nextLinkClassName={"nextBttn"}
+                      disabledClassName={"paginationDisabled"}
+                      activeClassName={"paginationActive"}
+                    />
+                  </div>
+                </div>
               )}
             </section>
           </div>
         </div>
-        <div className="other">
+        <div className="other w-10/12">
           <h2>Play Game</h2>
           <h3>
             <span className="luc">Lucky Number</span>{" "}
             <span className="sla">||</span>{" "}
             <span className="err">Error Boundary</span>
           </h3>
-          <h3
-          className="text-white"
-          >Rules</h3>
+          <h3 className="text-white">Rules</h3>
           <div className="about-game">
             <span className="pinned"></span>
             <p>
-              Roll the dice to see if you are lucky enough to win the game. 
+              Roll the dice to see if you are lucky enough to win the game.
               <br />
               If you roll a 7, you win! <br />
               If you roll an even number, you lose!
@@ -368,7 +381,12 @@ export const GithubRepo = () => {
           </div>
 
           <Link to="/error-boundary">
-            <button className="error">Check The Game Out</button>
+            <button
+              onClick={() => (window.location.href = "/error-boundary")}
+              className="text-white  focus:outline-none focus:ring-4  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 "
+            >
+              Check the game out
+            </button>{" "}
           </Link>
         </div>
       </div>

@@ -7,7 +7,7 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   /* padding-top: 30px; */
 }
 
@@ -57,7 +57,7 @@ input::placeholder {
   color: #e0e1e7;
 }
 
-.search-btn{
+.search-btn {
   color: white;
   position: absolute;
   right: 15px;
@@ -71,12 +71,9 @@ input::placeholder {
   padding: 10px 20px;
 }
 
-.search-btn:hover{
-  background-color: #0062cc; ;
+.search-btn:hover {
+  background-color: #0062cc;
 }
-
-
-
 
 .github-repo-header {
   background-color: #1e2a47;
@@ -94,21 +91,16 @@ input::placeholder {
 .user-profile {
   width: 100%;
   height: max-content;
- 
 }
 
 .user-profile div {
   background-color: #1e2a47;
 }
 
-
-
-.profile-detailer{
+.profile-detailer {
   margin-top: 50px;
   border-radius: 8px;
 }
-
-
 
 .user-avatar {
   width: 100px;
@@ -118,9 +110,9 @@ input::placeholder {
 
 .repos-container {
   margin-top: 60px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  height: max-content;
+  /* height: 410px; */
   background-color: #1e2a47;
 }
 
@@ -128,20 +120,17 @@ input::placeholder {
   justify-content: space-around;
   display: flex;
   flex-direction: column;
-  margin: 100px;
-  width: max-content;
+  /* width: max-content; */
 
   /* background-color: #1e2a47; */
   border-radius: 10px;
 }
 
-
-
-
 .paginationBttns {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  gap: 16px;
+  margin-top: 5px;
   list-style: none;
 }
 
@@ -151,7 +140,6 @@ input::placeholder {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  margin: 10px;
   transition: 0.8s;
   background-color: goldenrod;
   font-weight: 600;
@@ -190,14 +178,13 @@ input::placeholder {
   background-color: yellowgreen;
 }
 
-.both {
+/* .both {
   display: flex;
   flex-direction: row;
-}
+} */
 
 .other {
-  margin: 100px;
-  width: max-content;
+  /* width: max-content; */
   background-color: #1e2a47;
   border-radius: 10px;
   height: max-content;
@@ -274,14 +261,13 @@ input::placeholder {
 }
 
 @media screen and (max-width: 1180px) {
-  .both {
+  /* .both {
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   .repos-container {
     margin-right: unset;
-    margin-top: 10px;
   }
 }
 
@@ -291,12 +277,10 @@ input::placeholder {
     font-weight: 600;
   }
 
-  .user-avatar {
+  /* .user-avatar {
     width: 200px;
     height: 200px;
-  }
-
- 
+  } */
 
   .about-game {
     width: 300px;
@@ -332,7 +316,7 @@ input::placeholder {
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 639px) {
   .main-container h1 {
     font-size: 17px;
     font-weight: 600;
@@ -343,10 +327,9 @@ input::placeholder {
     height: 150px;
   }
 
- 
-
   .about-game {
     width: 220px;
+    
   }
 
   .other h2 {
@@ -358,7 +341,7 @@ input::placeholder {
   }
 
   .sub-contain {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .other h3 {
@@ -388,15 +371,62 @@ input::placeholder {
 
   .paginationBttns {
     margin-top: 30px;
-    margin-left: -10px;
   }
 
   .paginationBttns a {
     padding: 10px;
-    margin: 7px;
   }
 
-  .repos-container {
-    max-width: 300px;
+  /* .repos-container {
+    max-width: 350px;
+  } */
+
+  .user-avatar {
+    height: 70px;
+    width: 70px;
+  }
+
+  .paginationBttns a {
+    padding: 7px;
+    font-weight: 500;
+  }
+
+  .paginationBttns{
+   justify-content: space-between;
+   gap: 8px;
+  }
+
+  .repos-container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+ 
+  
+  .search-con-con svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+    display: block;
+    padding: 16px;
+    padding-left: 40px;
+    font-size: 15px;
+    color: white;
+  }
+  
+  input::placeholder {
+    color: #e0e1e7;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .search-btn {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 14px;
   }
 }

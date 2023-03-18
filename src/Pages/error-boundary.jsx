@@ -53,7 +53,7 @@ export class LuckyNumber extends Component {
 
   render() {
     return (
-      <div className="game-sec">
+      <div className="game-sec px-4">
         {/* about game */}
         <div className="about-game">
           <span className="pinned">📌</span>
@@ -71,13 +71,13 @@ export class LuckyNumber extends Component {
             this.setState({ number: Math.floor(Math.random() * 10) })
           }
           alt="dice"
-          className="dice"
+          className="dice mx-auto"
         />
         <h1>Your lucky number is {this.state.number} </h1>
         {this.state.number === 7 ? (
           <div>
             <h2>CONGRATS! You hit the jackpot! 🥳🤩</h2>
-            <img src={handShake} alt="handshake"className="hand-s" />
+            <img src={handShake} alt="handshake" className="hand-s mx-auto" />
           </div>
         ) : null}
         {/* throw error for even numbers */}
@@ -97,18 +97,17 @@ export const ErrorBoundaryExample = () => {
       <Helmet>
         <title>Error Boundary</title>
         <meta name="description" content="Error Boundary Example" />
-        <link
-          rel="canonical"
-          href="/error-boundary"
-              
-        />
+        <link rel="canonical" href="/error-boundary" />
       </Helmet>
       <div className="dice-m">
         <ErrorBoundary>
           <LuckyNumber luckyNumber={7} />
         </ErrorBoundary>
         {/* back button  */}
-        <button onClick={() => window.history.back()} className="error-btn">
+        <button
+          onClick={() => (window.location.href = "/")}
+          className="text-white  focus:outline-none focus:ring-4  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 mt-3"
+        >
           Back
         </button>
       </div>

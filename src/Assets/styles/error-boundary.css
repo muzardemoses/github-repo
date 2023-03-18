@@ -135,7 +135,10 @@
     }
     .about-game{
         padding: 10px;
-       
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .about-game p{
         font-size: 13px;
