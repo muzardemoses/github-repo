@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import "../Assets/styles/repo-details.css";
 import { Helmet } from "react-helmet";
@@ -10,7 +10,7 @@ import repositorySvg from "../Assets/images/repository.svg";
 export const RepoDetails = () => {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
-
+  const navigate = useNavigate();
   const params = useParams();
   const { state } = useLocation();
   console.log(params.id);
@@ -43,10 +43,10 @@ export const RepoDetails = () => {
         ) : (
           <div key={items.id}>
             <div
-              className="single-repo-name m-8 text-sm font-medium rounded-lg   flex justify-between items-center px-4 py-2  transition ease-in-out duration-300 "
+              className="single-repo-name m-8 text-sm font-medium rounded-lg   flex justify-between items-center px-4 py-2  transition ease-in-out duration-300 sm:px-2"
               style={{ background: "#f6f8ff" }}
             >
-              <h1 className="text-blue-500 text-center mt-0 mb-0">
+              <h1 className="text-blue-500 text-center mt-0 mb-0 sm:text-lg sm:font-semibold">
                 {items.name}
               </h1>
               <h4 className="text-gray-400 font-medium text-sm rounded-lg text-center px-2 py-1 border-gray-400 border mt-0">
@@ -57,13 +57,15 @@ export const RepoDetails = () => {
                 )}
               </h4>
             </div>
-            <div className="single-repo-desc">
-              <div className="repo-line flex flex-col gap-3">
-                <h4>
+            <div className="single-repo-desc sm:w-11/12">
+              <div className="repo-line flex flex-col gap-3 ">
+                <h4
+                className="sm:text-base sm:font-semibold"
+                >
                   {items.description ? items.description : "No Description"}
                 </h4>
                 {items.topics && items.topics.length > 0 ? (
-                  <div className="flex gap-2 ">
+                  <div className="flex gap-2 sm:grid sm:grid-flow-row sm:grid-cols-2 sm:justify-between">
                     {items.topics.map((item) => (
                       // eslint-disable-next-line react/jsx-no-target-blank
                       <a
@@ -127,7 +129,7 @@ export const RepoDetails = () => {
                     View Repository on Github
                   </a>
                 </div>
-                <p>
+                <div>
                   {items.homepage === null ? (
                     <div className="flex gap-2 items-center" color="#697c9a">
                       <img src={linkNullSvg} className="w-5 h-5 " alt="" />
@@ -151,11 +153,10 @@ export const RepoDetails = () => {
                       </a>
                     </div>
                   )}
-                </p>
+                </div>
               </div>
             </div>
-            <button
-              onClick={() => (window.location.href = "/")}
+            <button onClick={() => navigate(-1)}
               className="text-white  focus:outline-none focus:ring-4  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 "
             >
               Back

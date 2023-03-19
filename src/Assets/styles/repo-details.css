@@ -192,8 +192,8 @@
     } */
 
     .single-repo-desc{
-        width:  270px;
-        padding: 5px;
+        
+        padding: unset;
     }
 
     .single-repo{
