@@ -50,7 +50,7 @@ export const GithubRepo = () => {
       const data = await res.json();
       setProfile(data);
       setLoading(false);
-      console.log(data);
+      //console.log(data);
     };
     FetchProfile();
   }, [users]);

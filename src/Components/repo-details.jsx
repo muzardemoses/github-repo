@@ -13,7 +13,7 @@ export const RepoDetails = () => {
   const navigate = useNavigate();
   const params = useParams();
   const { state } = useLocation();
-  console.log(params.id);
+  //console.log(params.id);
 
   useEffect(() => {
     setLoading(true);
@@ -23,14 +23,14 @@ export const RepoDetails = () => {
       );
       const data = await res.json();
       setItems(data);
-      console.log(data);
+      //console.log(data);
       setLoading(false);
     };
 
     FetchRepos();
   }, [params.id]);
   // const repo = items.filter((item) => item.id === Number(params.id));
-  console.log(items);
+ // console.log(items);
   return (
     <div className="repo-details-main">
       <Helmet>
