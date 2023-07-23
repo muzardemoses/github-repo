@@ -1,6 +1,7 @@
-# AltSchool Africa  - GitHub Repository
+# AltSchool Africa - GitHub Repository
 
 This is a solution to the [GitHub Repository Exam from AltSchool Africa](https://www.altschoolafrica.com/).
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -14,8 +15,6 @@ This is a solution to the [GitHub Repository Exam from AltSchool Africa](https:/
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-
 
 ## Overview
 
@@ -31,15 +30,12 @@ Users should be able to:
 
 ![](./Capture.JPG)
 
-
-
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/muzardemoses/github-repo)
 - Live Site URL: [Check Live Url](https://git-repo-muzarde.netlify.app/)
 
 ## My process
-
 
 ### Built with
 
@@ -50,32 +46,44 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
-
 ### What I learned
 
 I learned how to use the GitHub API to fetch data from the API and display it on the page. I also learned how to use the React framework to build the application.
 
 ```js
 const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState(null);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch("https://api.github.com/users/muzardemoses/repos")
-      .then((res) => res.json())
-      .then((data) => {
-        setRepos(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err);
-        setLoading(false);
-      });
-  }, []);
+useEffect(() => {
+  setLoading(true);
+  fetch("https://api.github.com/users/muzardemoses/repos")
+    .then((res) => res.json())
+    .then((data) => {
+      setRepos(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      setError(err);
+      setLoading(false);
+    });
+}, []);
+
+{
+  searchResults.map((movie) => (
+    <div key={movie.id} className="flex flex-col gap-4">
+      <h4>
+        {movie.title} ({movie.release_date?.slice(0, 4)})
+      </h4>
+      <img
+        src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+        alt={movie.title}
+        className="rounded-md"
+      />
+    </div>
+  ));
+}
 ```
-
-
 
 ```css
 @media (prefers-color-scheme: dark) {
@@ -86,12 +94,9 @@ const [repos, setRepos] = useState([]);
 }
 ```
 
-
 ### Continued development
 
 I would like to continue learning React and improve my skills in it. I would also like to learn more about the GitHub API and how to use it to fetch data from it.
-
-
 
 ### Useful resources
 
@@ -107,10 +112,6 @@ I would like to continue learning React and improve my skills in it. I would als
 - Facebook - [Adebayo MuzardeMoses Olaoluwa ](https://facebook.com/ademuzardemoses)
 - YouTube - [MuzardeMoses](https://www.youtube.com/channel/UCg4W7cbWu6dW_8oJEHWaP9w)
 
-
 ## Acknowledgments
 
-
-I want to thank [AltSchool Africa](https://www.altschoolafrica.com/) for giving me the opportunity to learn and improve my skills as a developer. 
-
-
+I want to thank [AltSchool Africa](https://www.altschoolafrica.com/) for giving me the opportunity to learn and improve my skills as a developer.
