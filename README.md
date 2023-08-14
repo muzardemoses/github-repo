@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/muzardemoses/github-repo)
-- Live Site URL: [Check Live Url](https://git-repo-muzarde.netlify.app/)
+- Live Site URL: [Check Live Url](https://github-repository-beta.vercel.app/)
 
 ## My process
 
