@@ -62,7 +62,7 @@ export const GithubRepo = () => {
             <Link
               to={{ pathname: `/repo/${item.name}` }}
               state={{ user: item.owner.login }}
-              className="sub-repo  text-sm font-medium border rounded-lg  text-left bg-gray-700 border-gray-600 text-white flex justify-between items-center px-4 py-2 hover:bg-gray-600 cursor-pointer focus:ring-2   focus:outline-none focus:ring-gray-500 mb-2 transition ease-in-out duration-300 sm:px-3 sm:py-2 "
+              className="sub-repo text-sm font-medium border rounded-lg  text-left bg-gray-700 border-gray-600 text-white flex justify-between items-center px-4 py-2 hover:bg-gray-600 cursor-pointer focus:ring-2   focus:outline-none focus:ring-gray-500 mb-2 transition ease-in-out duration-300 sm:px-3 sm:py-2 "
             >
               <h3 class="text-blue-300 text-left mt-0 sm:text-sm">
                 {item.name}
@@ -344,7 +344,7 @@ export const GithubRepo = () => {
                     {profile.name}'s Repositories({profile.public_repos})
                   </h2>
                   <div className="repos">{displayRepos}</div>
-                  <div  className="flex justify-center py-3 ">
+                  <div className="flex justify-center py-3 ">
                     <ReactPaginate
                       previousLabel={"Previous"}
                       nextLabel={"Next"}
